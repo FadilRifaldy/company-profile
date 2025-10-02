@@ -4,15 +4,12 @@ import Link from "next/link";
 export default async function BlogPage() {
   const articles = await getNewsHeadline();
 
-  // ambil artikel pertama sebagai "headline"
   const headline = articles.length > 0 ? articles[0] : null;
 
   return (
     <div className="max-w-7xl mx-auto px-8">
-      {/* Headline Section */}
       {headline && (
         <div className="font-poppins grid lg:grid-cols-3 gap-12 pt-10 pb-16">
-          {/* Left big content */}
           <div className="lg:col-span-2">
             <h1 className="text-[32px] font-bold mb-6">Pocari News</h1>
 
@@ -37,8 +34,6 @@ export default async function BlogPage() {
             </div>
           </div>
 
-          {/* Placeholder "For Your Daily Reads" */}
-
           <div className="h-full flex flex-col">
             <div>
               <input
@@ -48,7 +43,6 @@ export default async function BlogPage() {
               />
             </div>
 
-            {/* card diperbesar */}
             <div className="flex-1 mt-7">
               <div className="h-full bg-gradient-to-r from-blue-50 via-white to-blue-50 rounded-2xl shadow-md p-10 text-center hover:shadow-xl transition duration-500 flex flex-col">
                 <div>
@@ -128,55 +122,3 @@ export default async function BlogPage() {
     </div>
   );
 }
-
-//  Article 2
-//         <article className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-//           <div className="relative h-48">
-//             <Image
-//               src="/images/article-2.jpg" // Ganti dengan path gambar artikel Anda
-//               alt="Sinkronisasi dengan Strava"
-//               fill
-//               className="object-cover"
-//             />
-//           </div>
-//           <div className="p-6 space-y-4">
-//             <h3 className="text-xl font-semibold text-gray-800 leading-tight">
-//               Ayo Sinkronisasi Akun Born To Sweat App-mu dengan Aplikasi Strava!
-//             </h3>
-//             <p className="text-gray-600 text-sm leading-relaxed">
-//               Updated: 01 Mar 2021 | By: Pocari SweatAuthor: Pocari SweatBorn To
-//               Sweat App kini sudah dapat...
-//             </p>
-//             <div className="flex items-center text-xs text-gray-400 space-x-4">
-//               <span>by Admin</span>
-//               <span>3 August</span>
-//               <span>1 min read</span>
-//             </div>
-//           </div>
-//         </article>
-
-//         {/* Article 3 */}
-//         <article className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-//           <div className="relative h-48">
-//             <Image
-//               src="/images/article-3.jpg" // Ganti dengan path gambar artikel Anda
-//               alt="Marathon Training"
-//               fill
-//               className="object-cover"
-//             />
-//           </div>
-//           <div className="p-6 space-y-4">
-//             <h3 className="text-xl font-semibold text-gray-800 leading-tight">
-//               Satu Hari Menjelang Marathon, Ini yang Harus Kamu Lakukan.
-//             </h3>
-//             <p className="text-gray-600 text-sm leading-relaxed">
-//               Updated: 27 Oct 2017 | Written By: Pocari SweatLari marathon
-//               merupakan olahraga yang sangat...
-//             </p>
-//             <div className="flex items-center text-xs text-gray-400 space-x-4">
-//               <span>by Admin</span>
-//               <span>3 August</span>
-//               <span>2 min read</span>
-//             </div>
-//           </div>
-//         </article>

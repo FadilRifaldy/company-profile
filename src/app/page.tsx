@@ -10,7 +10,7 @@ export default function Home() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/pocari-bg-hd.jpg" // Ganti dengan path gambar background Anda
+            src="/images/pocari-bg-hd.jpg"
             alt="Pocari Sweat Background"
             fill
             className="object-cover"
@@ -40,7 +40,7 @@ export default function Home() {
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
               <Image
-                src="/images/banner.png" // Ganti dengan path background image Anda
+                src="/images/banner.png"
                 alt="Pocari Sweat Lab Background"
                 fill
                 className="object-cover"
@@ -97,7 +97,7 @@ export default function Home() {
         <div className="absolute bg-gray-500/60 inset-0 z-10"></div>
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/sectionvid2.jpeg" // Ganti dengan path gambar background Anda
+            src="/images/sectionvid2.jpeg"
             alt="Pocari Sweat Background"
             fill
             className="object-cover"
@@ -124,7 +124,7 @@ export default function Home() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/upscalemedia-transformed.jpeg" // Ganti dengan path background image Anda
+            src="/images/upscalemedia-transformed.jpeg"
             alt="Pocari Footer Background"
             fill
             className="object-cover opacity-30"
@@ -154,7 +154,7 @@ export default function Home() {
                 {/* Phone Frame */}
                 <div className="relative w-100 h-[600px] mb-10">
                   <Image
-                    src="/images/info-phone-img.png" // Ganti dengan path gambar phone mockup Anda
+                    src="/images/info-phone-img.png"
                     alt="Instagram Stories with Pocari Sweat GIFs"
                     width={320}
                     height={600}
