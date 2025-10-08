@@ -5,10 +5,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#3880C3]">
       <div>
-        {/* Main Footer Content */}
         <div className="flex justify-center gap-30 py-14">
-          {/* Company Logo & Info */}
-
           <div className="z-0">
             <Image
               src="/images/logo.svg"
@@ -18,8 +15,6 @@ export default function Footer() {
               className="w-[150px] h-[80px]"
             />
           </div>
-
-          {/* Our Products & Articles */}
           <div>
             <h3 className="text-white font-semibold mb-2">Our Products</h3>
             <div className="space-y-3">
@@ -31,8 +26,6 @@ export default function Footer() {
               </Link>
             </div>
           </div>
-
-          {/* Events & Sports */}
           <div>
             <h3 className="text-white font-semibold mb-2">Events</h3>
             <div className="space-y-3">
@@ -50,8 +43,6 @@ export default function Footer() {
               </Link>
             </div>
           </div>
-
-          {/* Legal & Social */}
           <div>
             <h3 className="text-white font-semibold mb-2">FAQ</h3>
             <div className="space-y-3">
@@ -74,7 +65,7 @@ export default function Footer() {
             <div className="flex space-x-6">
               <Link
                 href="https://web.facebook.com/pocariID"
-                className="block text-white transition-colors"
+                className="block text-white transition-transform hover:scale-110 duration-500"
                 target="/blank"
               >
                 <Image
@@ -87,7 +78,7 @@ export default function Footer() {
               </Link>
               <Link
                 href="https://www.instagram.com/pocariid/"
-                className="block text-white transition-colors"
+                className="block text-white transition-transform hover:scale-110 duration-500"
                 target="/blank"
               >
                 <Image
@@ -100,7 +91,7 @@ export default function Footer() {
               </Link>
               <Link
                 href="https://twitter.com/pocariID"
-                className="block text-white transition-colors"
+                className="block text-white transition-transform hover:scale-110 duration-500"
                 target="/blank"
               >
                 <Image
@@ -113,7 +104,7 @@ export default function Footer() {
               </Link>
               <Link
                 href="https://www.youtube.com/user/pocarigoion"
-                className="block text-white transition-colors"
+                className="block text-white transition-transform hover:scale-110 duration-500"
                 target="/blank"
               >
                 <Image
@@ -127,8 +118,6 @@ export default function Footer() {
             </div>
           </div>
         </div>
-
-        {/* Bottom Copyright */}
         <div className=" bg-[#1a64a6] py-3.5 ">
           <div className="text-white text-[12px] text-center ">
             © 2021-2025 PT. AMERTA INDAH OTSUKA All Rights Reserved

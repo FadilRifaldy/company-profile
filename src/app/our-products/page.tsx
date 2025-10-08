@@ -5,7 +5,6 @@ export default function OurProducts() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-[#90C9F9] to-[#1976D2] text-white flex items-center">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between w-full px-6">
-        {/* Left Content */}
         <div className="flex-1 text-center md:text-left">
           <h1 className="text-shadow-lg md:text-[80px] font-extrabold leading-tight">
             POCARI SWEAT
@@ -37,8 +36,6 @@ export default function OurProducts() {
             </Link>
           </div>
         </div>
-
-        {/* Right Image */}
         <div className="flex-1 flex justify-center md:justify-end mt-39 ml-10">
           <div className="relative md:w-[700px] md:h-[500px]">
             <Image

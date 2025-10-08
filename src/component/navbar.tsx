@@ -3,15 +3,15 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-
+import { signIn, signOut, useSession } from "next-auth/react";
 export default function Navbar() {
   const router = useRouter();
+  const { data: session } = useSession();
 
   return (
     <nav className="sticky w-full bg-[] backdrop-blur-md bg-[#1a64a6] z-50">
       <div className="max-w-7xl mx-auto px-28 py-6">
         <div className="flex items-center justify-between">
-          {/* Logo */}
           <div>
             <Link href="/" className="relative z-10">
               <Image
@@ -23,10 +23,9 @@ export default function Navbar() {
               />
             </Link>
           </div>
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8 font-poppins text-white">
             <Link
-              href="#about"
+              href="/about"
               className="hover:text-black font-medium transition-transform hover:scale-110 duration-500 border-[] px-[10px] py-[3px] hover:bg-white rounded-[15px]"
             >
               About Us
@@ -55,13 +54,36 @@ export default function Navbar() {
             >
               Create Blog
             </Link>
-            <button
-              type="button"
-              className="font-semibold bg-white text-black px-6 py-2 rounded-full hover:bg-gray-400 transition-transform hover:scale-110 duration-500"
-              onClick={() => router.push("/login")}
-            >
-              Login
-            </button>
+
+            {session ? (
+              <button
+                onClick={() => signOut()}
+                className="font-semibold bg-white text-black px-6 py-2 rounded-full hover:bg-gray-400 transition-transform hover:scale-103 duration-500 cursor-pointer"
+              >
+                Sign out ({session.user?.name})
+              </button>
+            ) : (
+              <button
+                type="button"
+                className="font-semibold bg-white text-black px-6 py-2 rounded-full hover:bg-gray-400 transition-transform hover:scale-110 duration-500 cursor-pointer"
+                onClick={() => router.push("/login")}
+              >
+                Login
+              </button>
+              // <button
+              //   onClick={() => signIn("google", { callbackUrl: "/" })}
+              //   className="flex gap-2 items-center font-semibold bg-white text-black px-4 py-2 rounded-full hover:bg-gray-400 transition-transform hover:scale-110 duration-500 cursor-pointer"
+              // >
+              //  <Image
+              //       src="/images/Google_Favicon_2025.svg.png"
+              //       alt="arrow"
+              //       width={0}
+              //       height={0}
+              //       className="w-[16px] h-[16px]"
+              //     />
+              //   Sign in with Google
+              // </button>
+            )}
           </div>
         </div>
       </div>

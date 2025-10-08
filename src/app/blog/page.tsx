@@ -13,14 +13,18 @@ export default async function BlogPage() {
           <div className="lg:col-span-2">
             <h1 className="text-[32px] font-bold mb-6">Pocari News</h1>
 
-            <div className="shadow-xl mb-8 text-[32px]">
-              <img
-                src={headline.imgurl}
-                alt={headline.title}
-                className="rounded-xl w-full h-full object-contain"
-              />
-            </div>
-            <h2 className="text-2xl font-bold mb-3">{headline.title}</h2>
+            <Link target="/blank" href={`/blog/${headline.objectId}`}>
+              <div className="shadow-xl mb-8 cursor-pointer group">
+                <img
+                  src={headline.imgurl}
+                  alt={headline.title}
+                  className="w-full h-[500px] object-cover rounded-xl group-hover:opacity-90 transition hover:shadow-2xl"
+                />
+              </div>
+              <h2 className="text-2xl font-bold mb-3 hover:text-blue-600 transition">
+                {headline.title}
+              </h2>
+            </Link>
             <p className="mb-4 line-clamp-2 text-[16px] text-[#717171]">
               {headline.content}
             </p>
@@ -67,7 +71,7 @@ export default async function BlogPage() {
                 </div>
                 <Link
                   href="/create-blog"
-                  className="mt-8 px-6 py-3 rounded-full bg-gradient-to-r from-blue-600 to-blue-500 text-white font-semibold shadow-lg hover:shadow-xl hover:scale-105 transform transition duration-300"
+                  className="mt-8 px-6 py-3 rounded-full bg-blue-500 hover:bg-blue-600 text-white font-semibold shadow-lg hover:shadow-xl hover:scale-105 transform transition duration-300"
                 >
                   + Create Blog
                 </Link>
@@ -77,11 +81,9 @@ export default async function BlogPage() {
         </div>
       )}
 
-      {/* Articles Section */}
       <div className="text-[32px] font-semibold shadow-text-lg">
         Articles List
       </div>
-      {/* Articles Grid */}
       <div className="grid md:grid-cols-3 gap-8 pt-6 pb-20">
         {articles.map((article, idx) => (
           <Link
@@ -90,7 +92,6 @@ export default async function BlogPage() {
             target="_blank"
             className="bg-white rounded-2xl shadow-lg hover:shadow-2xl overflow-hidden transition-transform hover:scale-102 duration-500"
           >
-            {/* Article*/}
             <article className="flex flex-col h-full">
               <div className="relative h-60 w-full overflow-hidden">
                 <img
@@ -100,7 +101,7 @@ export default async function BlogPage() {
                 />
               </div>
               <div className="px-5 pt-4 space-y-3 flex-1">
-                <h3 className="text-xl font-semibold text-gray-800 leading-tight pb-5">
+                <h3 className="text-xl font-semibold text-gray-800 leading-tight pb-5 hover:text-blue-600 transition">
                   {article.title}
                 </h3>
                 <p className="text-[#717171] text-sm leading-relaxed line-clamp-3">

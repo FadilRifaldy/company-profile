@@ -2,7 +2,7 @@ import axios from "axios";
 
 // const API_KEY = "2e79acdcf95f4b4a9fafddc26d3cefc8";
 // // const BASE_URL = "https://newsapi.org/v2"
-const BASE_URL = "https://jobbingfold-us.backendless.app/api/data/blog";
+const BASE_URL = "https://aptstart-us.backendless.app/api/data/blog";
 
 // interface IArticle{
 //     title:string
@@ -38,6 +38,7 @@ export async function getNewsHeadline(): Promise<IArticle[]> {
 export async function getNewsDetail(objectId: string) {
   try {
     const res = await axios.get(`${BASE_URL}/${objectId}`);
+     return res.data
   } catch (error) {
     console.error(error);
     return [];

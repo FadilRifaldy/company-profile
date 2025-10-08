@@ -14,7 +14,6 @@ export default async function HighlightSection() {
             target="_blank"
             className="bg-white rounded-2xl shadow-lg hover:shadow-2xl overflow-hidden transition-transform hover:scale-102 duration-500"
           >
-            {/* Article*/}
             <article className="flex flex-col h-full">
               <div className="relative h-60 w-full overflow-hidden">
                 <img
