@@ -139,7 +139,7 @@ export default function Home() {
                     alt="Instagram Stories with Pocari Sweat GIFs"
                     width={320}
                     height={600}
-                    className="object-contain"
+                    className="object-contain hover:scale-102 transition-transform duration-500"
                   />
                 </div>
               </div>

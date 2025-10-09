@@ -45,7 +45,7 @@ export default function CreateBlog() {
         onSubmit={handleSubmit}
         className="min-h-[400px] space-y-5 max-w-xl w-full p-8 bg-gradient-to-r from-blue-100 via-blue-50 to-blue-100 rounded-2xl shadow-2xl"
       >
-        <h1 className="text-[32px] font-bold mb-6 text">Create Blog</h1>
+        <h1 className="text-[32px] font-bold mb-6 text-center">Create Blog</h1>
         <input
           type="text"
           placeholder="Title"
@@ -76,7 +76,7 @@ export default function CreateBlog() {
         <div className="flex justify-center py-2">
           <button
             type="submit"
-            className="cursor-pointer bg-blue-500 text-white px-4 py-2 rounded-xl hover:bg-blue-600 w-full shadow-lg transition-transform hover:scale-103 duration-500 hover:shadow-2xl"
+            className="cursor-pointer bg-blue-500 text-white px-4 py-3 rounded-xl hover:bg-blue-600 w-full shadow-lg transition-transform hover:scale-103 duration-500 hover:shadow-2xl"
           >
             Create Blog
           </button>

@@ -7,37 +7,39 @@ export default function Footer() {
       <div>
         <div className="flex justify-center gap-30 py-14">
           <div className="z-0">
-            <Image
-              src="/images/logo.svg"
-              alt="logo"
-              width={0}
-              height={0}
-              className="w-[150px] h-[80px]"
-            />
+            <Link href="/">
+              <Image
+                src="/images/logo.svg"
+                alt="logo"
+                width={0}
+                height={0}
+                className="w-[150px] h-[80px] hover:scale-110 transition-transform duration-500"
+              />
+            </Link>
           </div>
           <div>
             <h3 className="text-white font-semibold mb-2">Our Products</h3>
             <div className="space-y-3">
               <Link
-                href="/articles"
-                className="block text-white transition-colors"
+                href="/blog"
+                className="block text-white hover:text-gray-300 hover:scale-103 transition-transform duration-500"
               >
                 Articles
               </Link>
             </div>
           </div>
           <div>
-            <h3 className="text-white font-semibold mb-2">Events</h3>
+            <h3 className="text-white font-semibold mb-2 ">Events</h3>
             <div className="space-y-3">
               <Link
                 href="/pocari-sport"
-                className="block text-white transition-colors"
+                className="block text-white hover:text-gray-300 hover:scale-103 transition-transform duration-500"
               >
                 Pocari Sweat Sport
               </Link>
               <Link
-                href="/science"
-                className="block text-white transition-colors"
+                href="/pocari-lab"
+                className="block text-white hover:text-gray-300 hover:scale-103 transition-transform duration-500"
               >
                 Science
               </Link>
@@ -48,13 +50,13 @@ export default function Footer() {
             <div className="space-y-3">
               <Link
                 href="/terms"
-                className="block text-white transition-colors"
+                className="block text-white hover:text-gray-300 hover:scale-103 transition-transform duration-500"
               >
                 Terms & Conditions
               </Link>
               <Link
                 href="/policy"
-                className="block text-white transition-colors"
+                className="block text-white hover:text-gray-300 hover:scale-103 transition-transform duration-500"
               >
                 Privacy Policy
               </Link>

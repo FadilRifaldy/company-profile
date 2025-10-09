@@ -19,7 +19,7 @@ export default function Navbar() {
                 alt="logo pocari"
                 width={0}
                 height={0}
-                className="w-[106px] h-[40px]"
+                className="w-[106px] h-[40px] hover:scale-110 transition-transform duration-500"
               />
             </Link>
           </div>
@@ -70,19 +70,6 @@ export default function Navbar() {
               >
                 Login
               </button>
-              // <button
-              //   onClick={() => signIn("google", { callbackUrl: "/" })}
-              //   className="flex gap-2 items-center font-semibold bg-white text-black px-4 py-2 rounded-full hover:bg-gray-400 transition-transform hover:scale-110 duration-500 cursor-pointer"
-              // >
-              //  <Image
-              //       src="/images/Google_Favicon_2025.svg.png"
-              //       alt="arrow"
-              //       width={0}
-              //       height={0}
-              //       className="w-[16px] h-[16px]"
-              //     />
-              //   Sign in with Google
-              // </button>
             )}
           </div>
         </div>

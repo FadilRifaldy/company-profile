@@ -47,7 +47,7 @@ export default function TeamsPage() {
   }, []);
 
   return (
-    <main className="min-h-screen px-20 pt-10 pb-20 bg-gray-50">
+    <main className="min-h-screen px-20 pt-10 pb-20 bg-gray-50 font-poppins">
       <h1 className="text-4xl font-bold text-center mb-10">Our Team</h1>
       <div className="grid md:grid-cols-3 gap-8">
         {team.map((member: ITeams, index) => (

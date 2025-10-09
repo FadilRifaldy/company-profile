@@ -38,7 +38,7 @@ export async function getNewsHeadline(): Promise<IArticle[]> {
 export async function getNewsDetail(objectId: string) {
   try {
     const res = await axios.get(`${BASE_URL}/${objectId}`);
-     return res.data
+    return res.data;
   } catch (error) {
     console.error(error);
     return [];
@@ -48,9 +48,7 @@ export async function getNewsDetail(objectId: string) {
 export async function getHomepageHighlights(): Promise<IArticle[]> {
   try {
     // hanya ambil 3 artikel terbaru
-    const res = await axios.get(
-      `${BASE_URL}?pageSize=3&sortBy=created%20desc`
-    );
+    const res = await axios.get(`${BASE_URL}?pageSize=3&sortBy=created%20desc`);
     return res.data;
   } catch (error) {
     console.error(error);

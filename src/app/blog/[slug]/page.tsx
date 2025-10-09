@@ -1,7 +1,6 @@
 import { getNewsDetail } from "@/lib/backendless";
 import HighlightSection from "@/component/highlight";
 import Link from "next/link";
-import { div } from "framer-motion/client";
 
 export default async function BlogDetail(props: {
   params: Promise<{ slug: string }>;
@@ -9,6 +8,12 @@ export default async function BlogDetail(props: {
   const params = await props.params;
   const slug = params.slug;
   const data = await getNewsDetail(slug);
+
+  const paragraphs: string[] = data.content
+    ? data.content
+        .split(/\n{2,}|\r?\n/)
+        .filter((p: string) => p.trim() !== "")
+    : [];
 
   return (
     <div>
@@ -37,8 +42,16 @@ export default async function BlogDetail(props: {
             className="w-full rounded-xl shadow-lg mb-6"
           />
         )}
-        <div className="prose prose-lg max-w-none text-gray-800 leading-relaxed">
-          <p>{data.content}</p>
+        <div className="max-w-none text-gray-800 leading-relaxed">
+          {paragraphs.length > 0 ? (
+            paragraphs.map((p: string, i: number) => (
+              <p key={i} className="mb-5 text-[17px]">
+                {p}
+              </p>
+            ))
+          ) : (
+            <p>Tidak ada konten.</p>
+          )}
         </div>
       </article>
       <div>

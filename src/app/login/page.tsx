@@ -62,7 +62,7 @@ export default function LoginPage() {
           <button
             type="button"
             onClick={onBtSignIn}
-            className="hover:scale-103 duration-500 cursor-pointer shadow-lg bg-blue-500 hover:bg-blue-600 text-white py-3 rounded-lg font-semibold transition"
+            className="hover:scale-103 duration-500 cursor-pointer shadow-lg bg-blue-500 hover:bg-blue-600 text-white py-3 rounded-lg font-semibold transition hover:shadow-2xl"
           >
             Sign In
           </button>
@@ -78,7 +78,7 @@ export default function LoginPage() {
             <button
               type="button"
               onClick={() => signIn("google", { callbackUrl: "/" })}
-              className="flex gap-2 items-center justify-center font-semibold bg-white text-black px-4 hover:bg-gray-400 transition-transform hover:scale-103 duration-500 py-3 rounded-lg cursor-pointer"
+              className="hover:shadow-2xl flex gap-2 items-center justify-center font-semibold bg-white text-black px-4 hover:bg-gray-400 transition-transform hover:scale-103 duration-500 py-3 rounded-lg cursor-pointer"
             >
               <Image
                 src="/images/Google_Favicon_2025.svg.png"

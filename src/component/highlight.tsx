@@ -23,7 +23,7 @@ export default async function HighlightSection() {
                 />
               </div>
               <div className="px-5 pt-4 space-y-3 flex-1">
-                <h3 className="text-xl font-semibold text-gray-800 leading-tight pb-5">
+                <h3 className="text-xl font-semibold text-gray-800 leading-tight pb-5 hover:text-blue-600">
                   {article.title}
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed line-clamp-3">
