@@ -18,7 +18,7 @@ export default function CreateBlog() {
     }
 
     const res = await fetch(
-      "https://aptstart-us.backendless.app/api/data/blog",
+      "https://lovableairplane-us.backendless.app/api/data/Article",
       {
         method: "POST",
         headers: {

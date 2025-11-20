@@ -2,7 +2,7 @@ import axios from "axios";
 
 // const API_KEY = "2e79acdcf95f4b4a9fafddc26d3cefc8";
 // // const BASE_URL = "https://newsapi.org/v2"
-const BASE_URL = "https://aptstart-us.backendless.app/api/data/blog";
+const BASE_URL = "https://lovableairplane-us.backendless.app/api/data/Article";
 
 // interface IArticle{
 //     title:string
